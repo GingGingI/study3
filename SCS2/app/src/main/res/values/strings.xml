@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SCS</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="action_menu">Menu</string>
+</resources>
