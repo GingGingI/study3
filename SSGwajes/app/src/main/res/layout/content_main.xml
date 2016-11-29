@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.a309.ssgwajes.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/Btn1"
+        style="@style/Btn"
+        android:background="@color/colorPrimary"
+        android:text="AlertDialog Button"
+        android:textSize="35sp"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/Btn2"
+        style="@style/Btn"
+        android:background="@color/colorPrimaryDark"
+        android:text="SnackBar Button"
+        android:textSize="35sp"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/Btn3"
+        style="@style/Btn"
+        android:background="@color/colorAccent"
+        android:text="Just a button"
+        android:textSize="35sp"
+        android:onClick="onClick"/>
+
+</LinearLayout>
