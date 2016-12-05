@@ -29,8 +29,8 @@
         android:id="@+id/Btn3"
         style="@style/Btn"
         android:background="@color/colorAccent"
-        android:text="Just a button"
+        android:text=" Notification button"
         android:textSize="35sp"
-        android:onClick="onClick"/>
+        android:onClick="sendNotification"/>
 
 </LinearLayout>

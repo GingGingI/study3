@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity
 
     private static final int Dialog_Yes_No_Message = 1;
     private static final int Notification_ID = 1;
-    Button Btn1,Btn2;
+    Button Btn1,Btn2,Btn3;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,10 +50,11 @@ public class MainActivity extends AppCompatActivity
 
         Btn1 = (Button)findViewById(R.id.Btn1);
         Btn2 = (Button)findViewById(R.id.Btn2);
+        Btn3 = (Button)findViewById(R.id.Btn3);
 
         Btn1.setOnClickListener(this);
         Btn2.setOnClickListener(this);
-
+        Btn2.setOnClickListener(this);
     }
 
     @Override
