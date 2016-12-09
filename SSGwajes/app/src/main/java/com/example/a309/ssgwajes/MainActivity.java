@@ -6,6 +6,8 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
@@ -30,7 +32,8 @@ public class MainActivity extends AppCompatActivity
 
     private static final int Dialog_Yes_No_Message = 1;
     private static final int Notification_ID = 1;
-    Button Btn1,Btn2,Btn3;
+    final DB Db = new DB(getApplicationContext(), "Touch.db",null,1);
+    Button Btn1,Btn2,Btn3,Btn4;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -51,10 +55,11 @@ public class MainActivity extends AppCompatActivity
         Btn1 = (Button)findViewById(R.id.Btn1);
         Btn2 = (Button)findViewById(R.id.Btn2);
         Btn3 = (Button)findViewById(R.id.Btn3);
+        Btn3 = (Button)findViewById(R.id.Btn4);
 
         Btn1.setOnClickListener(this);
         Btn2.setOnClickListener(this);
-        Btn2.setOnClickListener(this);
+        Btn4.setOnClickListener(this);
     }
 
     @Override
@@ -63,7 +68,7 @@ public class MainActivity extends AppCompatActivity
             case Dialog_Yes_No_Message :
                 AlertDialog.Builder builder
                         = new AlertDialog.Builder(this);
-
+//http://berabue.blogspot.kr/2014/05/android-sqlite.html
                 builder.setTitle("끌꺼얌??")
                         .setMessage("진짜로???")
                         .setCancelable(false)
